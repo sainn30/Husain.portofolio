@@ -1,0 +1,123 @@
+@media screen and (max-width: 1000px) {
+    p{
+        font-size: .9rem;
+        line-height: 1.8rem;
+    }
+
+    .grid-1 .grid-2 .skills-grid .grid-3 {
+        gap: 1rem;
+    }
+
+    .skills-right ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 880px){
+/*-----------------------------------*\
+  #burger
+\*-----------------------------------*/
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    nav {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--primaryBackgroundColor);
+        border-left: 1px solid var(--bordercolor);
+        z-index: 9;
+        transform: translateX(100%);
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-active{
+        transform: translateX(0);
+    }
+
+    nav ul {
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+/*-----------------------------------*\
+  #Reusable
+\*-----------------------------------*/
+
+    :root {
+        --section-padding: 4rem 0;
+    }
+    
+    .pre-title {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin: 0.6rem 0 2.5rem;
+    }
+/*-----------------------------------*\
+  #Hero section 
+\*-----------------------------------*/
+
+    #hero {
+        padding: var(--section-padding);
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .hero-right {
+        order: -1;
+    }
+
+    .hero-left {
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .hero-left .pre-title {
+        margin: 0 auto;
+    }
+
+    .hero-name {
+        font-size: 2.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer {
+        padding: 2rem 0;
+    }
+
+    #skills {
+        padding: var(--section-padding);
+        grid-template-columns: 1fr;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+   
+}

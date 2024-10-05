@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+    --primarytextcolor:#232e35;
+    --secondarytextcolor: #656d72;
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --primaryBackgroundColor: #fff;
+    --secodaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryiconcolor: #7e74f1;
+    --primaryiconcolorhover: #5d51e8;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem
+}
+
+/*-----------------------------------*\
+  #RESET style
+\*-----------------------------------*/
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, strong {
+    color: var(--primarytextcolor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+    color: var(--secondarytextcolor);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+     width: 90%;
+    }
+}
+
+.section-title  {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.grid-1 {
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 1rem;
+ }
+
+.btn {
+    background-color: #fff;
+    border: 1.5px solid var(--borderColor);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn:hover {
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+.pre-title {
+   text-transform: uppercase; 
+   letter-spacing: 0.5rem;
+   color: var(--secondarytextcolor);
+   position: relative;
+   padding-left: 40px;
+   width: fit-content;
+   font-weight: 400;
+   font-size: 0.9rem;
+}
+
+.pre-title:before {
+    content: '';
+    background-color:var(--secondarytextcolor);
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/*-----------------------------------*\
+  #Logo & navigation menu
+\*-----------------------------------*/
+
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  
+  }
+
+.nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: cornflowerblue;
+}
+
+.nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li a {
+    color: var(--primarytextcolor);
+    transition: 0.2s ease-in-out;
+}
+
+.nav ul li a:hover {
+    color: cornflowerblue;
+}
+
+/* burger */
+
+.burger div {
+    width: 25px;
+    height: 2.5px;
+    background-color: cornflowerblue;
+    margin: 7px;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/*-----------------------------------*\
+  #hero section
+\*-----------------------------------*/
+
+#hero {
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: cornflowerblue;
+}
+
+.hero-right {
+   display: flex;
+   justify-content: center;
+}
+
+.hero-right img {
+    width: auto;
+    height: 500px;
+}
+
+/*-----------------------------------*\
+  #service section
+\*-----------------------------------*/
+
+#service {
+    padding: var(--sectionPadding);
+    background-color: var(--secodaryBackgroundColor);
+}
+
+.service-section .pre-title {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.service-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: var(--itemBorderRadius);
+    background-color: var(--primaryBackgroundColor);
+}
+
+.service-icon {
+    background-color: var(--secodaryBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.service-icon svg {
+    fill: cornflowerblue;
+}
+
+.service-title {
+    margin: 1.5rem;
+    font-weight: 500;
+    font-size: large;
+}
+
+/*-----------------------------------*\
+  #portfolio section
+\*-----------------------------------*/
+
+.grid-2{
+    display: flex;
+    gap: 3rem;
+}
+
+#portfolio {
+    padding: var(--sectionPadding);
+}
+
+.portfolio-card {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderColor);
+}
+
+.portfolio-cover {
+    height: 250px;
+}
+
+.portfolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: cornflowerblue;
+}
+
+.portfolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portfolio-title a svg:hover {
+    fill: cornflowerblue;
+}
+
+.portfolio-title a svg {
+    transition: 0.3s ease-in-out;
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.portfolio-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    padding: 0.4rem 1rem;
+    color: var(--secondarytextcolor);
+    border-radius: 13px;
+    transition: 0.3s ease-in-out;
+}
+
+.portfolio-tags div:is(:hover, :focus-visible) {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.portfolio p {
+    text-align: center;
+}
+
+/*-----------------------------------*\
+  #skills section
+\*-----------------------------------*/
+
+#Skills {
+    padding: var(--sectionPadding);
+    background-color: var(--secodaryBackgroundColor);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education {
+    display: flex;
+    gap: 2rem;
+}
+
+.education .line {
+    padding: 0 .7rem;
+}
+
+.education .line div {
+    background-color: var(--borderColor);
+    width: 2px;
+    height: 100%;
+    position: relative;
+}
+
+.education .education-info p {
+    padding: .6rem 0 1.4rem;
+}
+
+.education .education-years {
+    margin-bottom: 3rem;
+}
+
+.education .line div::before {
+    content: '';
+    background-color: var(--borderColor);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 100px;
+    left: -9px;
+
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-list ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+.skills-list ul li {
+    list-style: disc;
+}
+
+/*-----------------------------------*\
+  #contact section
+\*-----------------------------------*/
+
+#Contact {
+    padding: var(--sectionPadding);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.contact-form div{
+   margin-bottom: 1.2rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: .7rem 1.5rem;
+    font-family: "Roboto", sans-serif;
+    resize: none;
+    background-color: var(--secodaryBackgroundColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: var(--secondarytextcolor);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: cornflowerblue;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: .75rem 1rem;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: rgb(37, 144, 215);
+}
+
+.contact-icon {
+    background-color: var(--secodaryBackgroundColor);
+    width: fit-content;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+    margin: 0 1rem;
+}
+
+.contact-icon svg {
+    fill: cornflowerblue;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 1rem 1.5rem;
+}
+
+.contact-info p{
+    margin-top: .8rem;
+}
+
+/*-----------------------------------*\
+  #footer section
+\*-----------------------------------*/
+
+.footer {
+    padding: 4rem 0;
+}
+
+.footer-icon {
+    text-align: center;
+}
+
+.footer-icon a {
+   padding: .5rem;
+}
+
+.footer-text {
+    text-align: center;
+    padding-top: .8rem;
+}
+
+.footer-icon a:hover {
+    fill: cornflowerblue; 
+}
+
+.footer-icon a svg {
+    transition: 0.2s ease-in-out;
+}
+
+.footer-icon a svg:is(:hover, :focus-visible) { transform: translateY(-3px);}
